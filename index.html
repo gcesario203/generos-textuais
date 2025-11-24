@@ -69,7 +69,7 @@
 
       <div class="panel">
         <h3>🔧 Crafting</h3>
-        <div style="font-size:13px;color:var(--muted)">Combine <strong>GALHO</strong> + <strong>PEDRA PONTUDA</strong></div>
+        <div style="font-size:13px;color:var(--muted)">Combine <strong>GALHO</strong> + <strong>PEDRA PONTIAGUDA</strong></div>
         <button id="craft-btn" disabled>🔧 Criar Faca Rudimentar</button>
       </div>
 
@@ -80,13 +80,13 @@
     </aside>
   </main>
 
-  <footer>Atividade: Gêneros Textuais em Jogos Digitais — Prof.ª Sílvia</footer>
+  <footer>Atividade: Gêneros Textuais em Jogos Digitais - Prof.ª Sílvia</footer>
 
   <!-- Overlays: Tela1, Tela2, Tela3 -->
   <div class="overlay" id="overlay-help">
     <div class="popup">
-      <h2>📋 Tela 1 — Ajuda: Como criar sua primeira ferramenta</h2>
-      <p>Você já coletou <strong>GALHO</strong> e <strong>PEDRA PONTUDA</strong>. Para criar a <strong>Faca Rudimentar</strong>:</p>
+      <h2>📋 Tela 1 - Ajuda: Como criar sua primeira ferramenta</h2>
+      <p>Você já coletou <strong>GALHO</strong> e <strong>PEDRA PONTIAGUDA</strong>. Para criar a <strong>Faca Rudimentar</strong>:</p>
       <ol>
         <li>Abra o painel de <strong>Crafting</strong> (botão ao lado).</li>
         <li>Clique em <strong>"🔧 Criar Faca Rudimentar"</strong> quando disponível.</li>
@@ -100,13 +100,11 @@
 
   <div class="overlay" id="overlay-branch">
     <div class="popup">
-      <h2>🔍 Tela 2 — Pista: Descrição do Galho</h2>
-      <p><strong>1) Descrição / Narração:</strong></p>
+      <h2>🔍 Tela 2 - Pista: Descrição do Galho</h2>
       <p>Um pedaço de madeira enegrecido nas pontas, com fibras que indicam resistência. Parece ter vindo de uma árvore antiga que suportou muitas tempestades.</p>
-      <p><strong>2) Dica (hipertexto):</strong></p>
       <p>Este galho lembra os exemplares do <span class="link" id="link-ancient">Salgueiro-Ancião</span>.</p>
       <div id="ancient-info" style="display:none;margin-top:10px;padding:10px;background:#fff8dc;border-radius:8px;border:1px solid #f0e0b0;color:#1a2a3a">
-        <strong>Salgueiro-Ancião:</strong> árvore nativa da ilha. Madeira flexível e muito resistente — ideal para cabos de ferramentas.
+        <strong>Salgueiro-Ancião:</strong> árvore nativa da ilha. Madeira flexível e muito resistente - ideal para cabos de ferramentas.
       </div>
       <div class="actions">
         <button class="btn secondary" id="close-branch">Fechar</button>
@@ -116,9 +114,9 @@
 
   <div class="overlay" id="overlay-valkiria">
     <div class="popup">
-      <h2>📻 Tela 3 — Reação: Mensagem de Valkiria</h2>
+      <h2>📻 Tela 3 - Reação: Mensagem de Valkiria</h2>
       <p><strong>Walkie-talkie:</strong> um estalo e uma voz distante.</p>
-      <p><strong>Valkiria:</strong> “Vejo que improvisou uma faca. Use-a bem — a ilha é implacável. Não perca recursos.”</p>
+      <p><strong>Valkiria:</strong> “Vejo que improvisou uma faca. Use-a bem - a ilha é implacável. Não perca recursos.”</p>
       <p><strong>Escolha sua resposta:</strong></p>
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
         <div class="dialog-option" id="opt-coop">1) 🤝 Cooperativa: “Obrigado, vou seguir suas instruções. Quero ajuda.”</div>
@@ -221,7 +219,7 @@
 
   const worldItems = [
     { id:'branch', name:'Galho', x:140, y: sandTop() + 70, collected:false, bounce:0 },
-    { id:'stone', name:'Pedra Pontuda', x:620, y: sandTop() + 130, collected:false, bounce:0 }
+    { id:'stone', name:'PEDRA PONTIAGUDA', x:620, y: sandTop() + 130, collected:false, bounce:0 }
   ];
 
   const inventory = [];
@@ -340,12 +338,12 @@
   });
   document.getElementById('close-valk').addEventListener('click', ()=>document.getElementById('overlay-valkiria').style.display='none');
   document.getElementById('opt-coop').addEventListener('click', ()=>{
-    document.getElementById('valk-feedback').textContent = 'Você escolheu cooperar — Valkiria responde com rotas e dicas.';
+    document.getElementById('valk-feedback').textContent = 'Você escolheu cooperar - Valkiria responde com rotas e dicas.';
     log('Você respondeu de forma cooperativa para Valkiria.');
     try{ beep(600,0.08,0.06); }catch(e){}
   });
   document.getElementById('opt-susp').addEventListener('click', ()=>{
-    document.getElementById('valk-feedback').textContent = 'Você respondeu desconfiado — a comunicação fica tensa.';
+    document.getElementById('valk-feedback').textContent = 'Você respondeu desconfiado - a comunicação fica tensa.';
     log('Você respondeu desconfiado para Valkiria.');
     try{ beep(220,0.08,0.06); }catch(e){}
   });
